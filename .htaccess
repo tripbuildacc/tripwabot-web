@@ -1,0 +1,17 @@
+Options -MultiViews
+RewriteEngine On
+
+# error page
+ErrorDocument 404 /ntahlah
+ErrorDocument 403 /ntahlah
+ErrorDocument 500 /ntahlah
+ErrorDocument 502 /ntahlah
+ErrorDocument 503 /ntahlah
+
+#remover label
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+)$ $1.html [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.+)$ $1.php [L]
