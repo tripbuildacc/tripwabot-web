@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/:path.html", "destination": "/:path" }
+  ],
+  "redirects": [
+    { "source": "/old", "destination": "/new", "permanent": true }
+  ],
+  "routes": [
+    { "handle": "error", "status": 404, "dest": "/ntahlah" }
+  ]
+}
